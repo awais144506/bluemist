@@ -10,7 +10,8 @@ import {
     Phone,
     MapPin,
     ArrowRight,
-    Droplets
+    Droplets,
+    Linkedin // Added Linkedin
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -83,7 +84,7 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <MapPin className="text-blue-500 shrink-0 mt-1" size={20} />
-                                <span>Al Jannat Main Street, Jan Muhammad Road, Sunfort Garden Housing Society, Lahore</span>
+                                <span className="text-sm leading-relaxed">Al Jannat Main Street, Jan Muhammad Road, Sunfort Garden Housing Society, Lahore</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="text-blue-500 shrink-0" size={20} />
@@ -114,12 +115,23 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+                <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
                     <p>© {currentYear} Blue Mist Water Company. All rights reserved.</p>
-                    <div className="flex gap-8">
-                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                    
+                    <div className="flex flex-wrap justify-center gap-6 bg-white rounded-xl p-2">   
+                        {/* --- DEVELOPED BY SECTION --- */}
+                        <Link 
+                            href="https://www.linkedin.com/in/muhammad-awais-122133197/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 hover:text-blue-800 transition-colors group"
+                        >
+                            
+                            <span>Developed by: <span className="font-semibold text-blue-600 group-hover:text-blue-800">Muhammad Awais</span></span>
+                            <Linkedin size={14} className="text-blue-600 group-hover:text-blue-800" />
+                        </Link>
                     </div>
+
                     <div className="flex items-center gap-1 text-blue-500/50">
                         <Droplets size={16} />
                         <span className="font-bold tracking-tighter">PURE QUALITY</span>
